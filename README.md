@@ -17,7 +17,6 @@
   
   2.关于查询要素报错的问题其中一个为，读取jsonp格式报错，是由于未开启加载jsonp格式的配置
     解决方法：在geoserver\WEB-INF\web.xml中，添加或者取消注释如下配置：
-    
     ```
     <context-param>
       <param-name>ENABLE_JSONP</param-name>
