@@ -24,3 +24,5 @@
    </context-param>
   ```
   3.如图
+  ![Image text]( https://github.com/mainblade/openlayer-/blob/master/image/pic.jpg)
+ 
