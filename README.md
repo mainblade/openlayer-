@@ -72,7 +72,7 @@
 ### 4.针对openlayer中添加div的问题
    解决方法：div添加完后，若需要随着地图移动，则需要实例ol.Overlay，添加所需元素后，再利用setPosition方法，将其位置固定在地图中。
    ```
-           var displayBox = new ol.Overlay({
+        var displayBox = new ol.Overlay({
             element: '<div class = 'markDispaly'></div>',
             offset: [0, 0],
             positioning: 'right'
