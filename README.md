@@ -54,19 +54,20 @@
    ```
 ### 3.针对openlayer中鼠标的监听，禁用问题
    解决方法：1）监听鼠标事件
-   ```
+   `
               //监听鼠标单击事件
               map.on('singleclick', function (evt) {
                 //你要调用的函数
               });
-   ```
-             2）鼠标事件禁用问题
-   ```
+   `
+            2）鼠标事件禁用问题
+           
+   `
               //移除鼠标单击事件
               map.removeEventListener('singleclick', function (evt) {
               
               }, false);
-   ```
+   `
               
  ![主界面.png](https://github.com/mainblade/openlayer-/blob/master/image/%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
  
