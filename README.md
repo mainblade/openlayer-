@@ -60,7 +60,7 @@
                 //你要调用的函数
               });
    ```
-           2）鼠标事件禁用问题
+  2）鼠标事件禁用问题
    ```
               //移除鼠标单击事件
               map.removeEventListener('singleclick', function (evt) {
