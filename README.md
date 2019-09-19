@@ -62,12 +62,24 @@
                 //你要调用的函数
               });
    ```
-   2）鼠标事件禁用问题
+   2）禁用鼠标事件
    ```
               //移除鼠标单击事件
               map.removeEventListener('singleclick', function (evt) {
               
               }, false);
+   ```
+### 4.针对openlayer中添加div的问题
+   解决方法：div添加完后，若需要随着地图移动，则需要实例ol.Overlay，添加所需元素后，再利用setPosition方法，将其位置固定在地图中。
+   ```
+           var displayBox = new ol.Overlay({
+            element: '<div class = 'markDispaly'></div>',
+            offset: [0, 0],
+            positioning: 'right'
+        });
+        displayBox.id = markInfo.id;//设置此overlay的id作为标识，目的是为了从map中移除时方便
+        displayBox.setPosition(markCoord);//设置坐标
+        map.addOverlay(displayBox);
    ```
  ![主界面.png](https://github.com/mainblade/openlayer-/blob/master/image/%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
  
