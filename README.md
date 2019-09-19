@@ -28,7 +28,7 @@
   PS：新版Geoserver中已有该段代码，只需将此段代码取消注释即可
   
 ### 2.关于查询要素报错的问题其中一个为，读取jsonp格式报错，是由于未开启加载jsonp格式的配置
-    解决方法：在geoserver\WEB-INF\web.xml中，添加或者取消注释如下配置：
+   解决方法：在geoserver\WEB-INF\web.xml中，添加或者取消注释如下配置：
   ```
    <context-param>
      <param-name>ENABLE_JSONP</param-name>
@@ -54,19 +54,19 @@
    ```
 ### 3.针对openlayer中鼠标的监听，禁用问题
    解决方法：1）监听鼠标事件
-              ```
+   ```
               //监听鼠标单击事件
               map.on('singleclick', function (evt) {
                 //你要调用的函数
               });
-              ```
+   ```
              2）鼠标事件禁用问题
-              ```
+   ```
               //移除鼠标单击事件
               map.removeEventListener('singleclick', function (evt) {
               
               }, false);
-              ```
+   ```
               
  ![主界面.png](https://github.com/mainblade/openlayer-/blob/master/image/%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
  
