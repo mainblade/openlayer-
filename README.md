@@ -40,7 +40,7 @@
 ### 1.目前使用版本为openlayer5，网上的教学版本为openlayer3，推荐一个教程，说的很详细，很基础。
   [ol3教程](https://weilin.me/ol3-primer)
 ### 2.针对页面发生改变，地图不会及时更新的问题
-    解决方法：当监听到页面发生改变时，调用map.updateSize()方法，及时更新地图尺寸。如果没有效果，则设置延迟函数进行更新。
+   解决方法：当监听到页面发生改变时，调用map.updateSize()方法，及时更新地图尺寸。如果没有效果，则设置延迟函数进行更新。
    ```
         var timesRun = 0;
         var monitor = setInterval(function () {
@@ -53,14 +53,14 @@
         }, 10);
    ```
 ### 3.针对openlayer中鼠标的监听，禁用问题
-    解决方法：1）监听鼠标事件
+   解决方法：1）监听鼠标事件
               ```
               //监听鼠标单击事件
               map.on('singleclick', function (evt) {
                 //你要调用的函数
               });
               ```
-              2）鼠标事件禁用问题
+             2）鼠标事件禁用问题
               ```
               //移除鼠标单击事件
               map.removeEventListener('singleclick', function (evt) {
