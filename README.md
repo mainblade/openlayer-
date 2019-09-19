@@ -38,5 +38,5 @@
 ### 3.完成后重启服务，即可
 ## 二、openlayer开发心得
 ### 目前使用版本为openlayer5，网上的教学版本为openlayer3，推荐一个教程，说的很详细，很基础。
-    [ol3教程](https://weilin.me/ol3-primer/)
+    [ol3教程](https://weilin.me/ol3-primer/ "ol3教程")
  
