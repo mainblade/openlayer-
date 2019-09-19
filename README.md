@@ -39,6 +39,34 @@
 ## 二、openlayer开发心得
 ### 1.目前使用版本为openlayer5，网上的教学版本为openlayer3，推荐一个教程，说的很详细，很基础。
   [ol3教程](https://weilin.me/ol3-primer)
-### 2.基于openlayer开发的项目为邯郸房产管理系统，主要功能如下
+### 2.针对页面发生改变，地图不会及时更新的问题
+    解决方法：当监听到页面发生改变时，调用map.updateSize()方法，及时更新地图尺寸。如果没有效果，则设置延迟函数进行更新。
+   ```
+        var timesRun = 0;
+        var monitor = setInterval(function () {
+            timesRun += 1;
+
+            if (timesRun === 10) {
+                clearInterval(monitor);
+            }
+            map.updateSize();
+        }, 10);
+   ```
+### 3.针对openlayer中鼠标的监听，禁用问题
+    解决方法：1）监听鼠标事件
+              ```
+              //监听鼠标单击事件
+              map.on('singleclick', function (evt) {
+                //你要调用的函数
+              });
+              ```
+              2）鼠标事件禁用问题
+              ```
+              //移除鼠标单击事件
+              map.removeEventListener('singleclick', function (evt) {
+              
+              }, false);
+              ```
+              
  ![主界面.png](https://github.com/mainblade/openlayer-/blob/master/image/%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
  
